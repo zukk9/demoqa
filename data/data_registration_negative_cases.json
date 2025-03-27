@@ -1,0 +1,16 @@
+[
+  {
+    "test_case": "valid_data_cyrillic",
+    "firstName": ["JohnJohnJohnJohnJ", "", " ", "12345", "!@#$%", "John123", "Jean    Luc", "O'Con!nor", "Jean--Luc", "<script>alert('XSS')</script>", "ИванOleg", "李雷"],
+    "lastName": ["SmithSmithSmithSm", "", " ", "67890", "!@#$%^", "McDonald123", "Marie,, Claire", "Jean--Luc", "<b>Garcia</b>", "Müller李雷", "赵 钱 孙 李"],
+    "gender": ["Male", "Female", "Other"],
+    "mobileNumber": ["", " ", "12345", "1234567890123456", "abcde12345", "phoneNumber", "987-654-3210", "(987) 654-3210", "+1 987 654 3210", "2222222222"],
+    "date_of_birth": "",
+    "subjects": [],
+    "hobbies": [],
+    "picture": "",
+    "current_address": "",
+    "state": "",
+    "city": ""
+  }
+]

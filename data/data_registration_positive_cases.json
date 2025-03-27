@@ -1,0 +1,16 @@
+[
+  {
+    "test_case": "valid_data_cyrillic",
+    "firstName": ["Иван", "Анна-Мария", "О'Коннор", "Jean-Luc", "Marie Claire", "李雷", "Muhammad", "John", "Oleg", "A.", "Эльвира", "Василиса123", "Д'Артаньян", "Núñez", "Müller", "Иванов-Кузнецов", "Роза Люксембург"],
+    "lastName": ["Иванов", "Петров-Сидоров", "O'Connor", "Jean-Luc", "McDonald", "Müller", "Núñez", "Smith", "李", "Ибрагимов", "Д'Артаньян", "Фон Дейк", "Эль-Шариф", "Гарсиа-Маркес", "Романенко", "Иванов-Кузнецов", "Ким"],
+    "gender": ["Male", "Female", "Other"],
+    "mobileNumber": ["9876543210"],
+    "date_of_birth": "",
+    "subjects": [],
+    "hobbies": [],
+    "picture": "",
+    "current_address": "",
+    "state": "",
+    "city": ""
+  }
+]
