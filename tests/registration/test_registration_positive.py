@@ -1,40 +1,35 @@
-from itertools import product
-
-import pytest
-import json
-from pathlib import Path
 import time
-import os
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
+import pytest
+from test_main import RegistrationPage
+from conftest import COMBINATIONS
 
-current_dir = Path(__file__).parent
-json_path = current_dir.parent.parent / "data" / "data_registration_positive_cases.json"
-image_path = current_dir.parent.parent / "images" / "photo.png"
-link = "https://demoqa.com/automation-practice-form"
+@pytest.mark.parametrize("firstName, lastName, gender, mobileNumber", COMBINATIONS)
+def test_registration(browser, firstName, lastName, gender, mobileNumber):
+    try:
+        registration_page = RegistrationPage(browser)
+        registration_page.open()
+        registration_page.get_first_name_field().send_keys(firstName)
+        registration_page.get_last_name_field().send_keys(lastName)
+        registration_page.get_mobile_Number_field().send_keys(mobileNumber)
+        registration_page.get_gender_radio_button(gender).click()
+        registration_page.submit_form()
 
-with open(json_path, "r", encoding="utf-8") as file:
-    data = json.load(file)
+    except Exception as e:
+        print(f"Test Failed: {str(e)}")
 
-@pytest.fixture(scope="class")
-def browser():
-    driver = webdriver.Chrome()
-    driver.implicitly_wait(5)
-    yield driver
-    driver.quit()
-
-combinations = list(product(
-    data[0]["firstName"],
-    data[0]["lastName"],
-    data[0]["gender"],
-    data[0]["mobileNumber"]
-))
-
+'''
 class TestRegistrationPositiveCases:
-    @pytest.mark.parametrize("firstName, lastName, gender, mobileNumber", combinations)
+    @pytest.mark.parametrize("firstName, lastName, gender, mobileNumber", COMBINATIONS)
     def test_valid_registration_min(self, browser, firstName, lastName, gender, mobileNumber):
-        browser.get(link)
+        main_positive_function(browser, firstName, lastName, gender, mobileNumber)
+
+'''
+
+'''
+    # def test_valid_registration_full(self, browser, firstName, lastName, gender, mobileNumber):
+    #    main_positive_function(browser, firstName, lastName, gender, mobileNumber)
+    def test_valid_registration_min(self, browser, firstName, lastName, gender, mobileNumber):
+        browser.get(LINK)
 
         browser.find_element(By.ID, "firstName").send_keys(firstName)
         browser.find_element(By.ID, "lastName").send_keys(lastName)
@@ -52,7 +47,7 @@ class TestRegistrationPositiveCases:
         else:
             assert modal_window.is_displayed(), "Element not found"
         time.sleep(5)
-
+    '''
 
 
 

@@ -1,16 +1,46 @@
 [
   {
-    "test_case": "valid_data_cyrillic",
     "firstName": ["Иван", "Анна-Мария", "О'Коннор", "Jean-Luc", "Marie Claire", "李雷", "Muhammad", "John", "Oleg", "A.", "Эльвира", "Василиса123", "Д'Артаньян", "Núñez", "Müller", "Иванов-Кузнецов", "Роза Люксембург"],
     "lastName": ["Иванов", "Петров-Сидоров", "O'Connor", "Jean-Luc", "McDonald", "Müller", "Núñez", "Smith", "李", "Ибрагимов", "Д'Артаньян", "Фон Дейк", "Эль-Шариф", "Гарсиа-Маркес", "Романенко", "Иванов-Кузнецов", "Ким"],
     "gender": ["Male", "Female", "Other"],
     "mobileNumber": ["9876543210"],
+    "userEmail": ["user.name@example.com", "user123@example.net", "name+tag@gmail.com", "my-company@gmail.org", "admin@web.technology" ],
     "date_of_birth": "",
-    "subjects": [],
-    "hobbies": [],
+    "subjectsInput": ["IT", "Statistics", "Statistics", "Machine Learning Basics", "Comp. Sci.", "Children's Literature", "C++ Programming" ],
+    "hobbies": ["Sports", "Reading", "Music"],
     "picture": "",
-    "current_address": "",
-    "state": "",
-    "city": ""
+    "current_address": ["Bahnhofstraße 22a, 80335 München", "Königsweg 10/2, 50667 Köln", "Rue de l’Église, 75001 Paris" ],
+    "state": [
+      {
+        "name": "NCR",
+        "city": [
+          "Delhi",
+          "Gurgaon",
+          "Noida"
+        ]
+      },
+      {
+        "name": "Uttar Pradesh",
+        "city": [
+          "Arga",
+          "Lucknow",
+          "Merrut"
+        ]
+      },
+      {
+        "name": "Haryana",
+        "city": [
+          "Karnal",
+          "Panipat"
+        ]
+      },
+      {
+        "name": "Rajasthan",
+        "city": [
+          "Jaipur",
+          "Jaiselmer"
+        ]
+      }
+    ]
   }
 ]
